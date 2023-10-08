@@ -4,21 +4,15 @@ import "./CardContainer.css"
 
 import Card from './CardContainer/Card'
 
-const CardContainer = () => {
-    const displayItems = [
-        {title:"Gaming accessories", },
-        {title:"Toys Under $30", },
-        {title:"Electronics", },
-        {title:"Sign in ", },
-        {title:"Home & Kitchen Under $30", },
-        {title:"Health & Personal Care", },
-        {title:"Refresh your space", },
-        {title:"Shop deals in Fashion", },
-    ]
+const CardContainer = ({pos, displayItems}) => {
   return (
-    <div className='w-[90vw] mx-auto card-container'>
-        {displayItems.map((item, i) => <Card key={i} title={item.title} />)}
-    </div>
+    <>
+    {pos ? <div className='w-[90vw] mx-auto card-container'>
+        {displayItems.map((item, i) => <Card key={i} title={item.title} image={item.image} btn_text={item.btn_text} />)}
+    </div> : <div className='w-[90vw] mx-auto card-container-2'>
+        {displayItems.map((item, i) => <Card key={i} title={item.title} image={item.image} btn_text={item.btn_text} />)}
+    </div> }
+    </>
   )
 }
 

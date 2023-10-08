@@ -1,9 +1,13 @@
 .card-container {
-    position: absolute;
-    left: 5vw;
-    top: 22em;
     height: auto;
-    background: linear-gradient(to bottom transparent rgba(255, 255, 255, 0.605) rgba(255, 255, 255, 0.605) rgba(255, 255, 255, 0.605));
+    background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.605), transparent, transparent);
+    display: grid;
+    grid-template-columns: repeat(4, 20.5vw);
+    gap: 2em;
+}
+
+.card-container-2 {
+    height: auto;
     display: grid;
     grid-template-columns: repeat(4, 20.5vw);
     gap: 2em;

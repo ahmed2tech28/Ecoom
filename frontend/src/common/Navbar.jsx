@@ -41,7 +41,7 @@ const Navbar = () => {
                 <div className="right-left-nav flex flex-col justify-center">
                   <span className="material-symbols-outlined">location_on</span>
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center cursor-pointer">
                   <div className="text-[12px]">Helow</div>
                   <div className="text-[12px] font-bold">Pakistans</div>
                 </div>
