@@ -3,6 +3,8 @@ import React from "react";
 import Mycarousel from "./Home/Mycarousel";
 import CardContainer from "./MostUsed/CardContainer";
 import ProductContainer from "./MostUsed/ProductContainer";
+import DiscountItemsCntainer from "./MostUsed/DiscountItemsCntainer";
+import Footer from "../common/Footer";
 
 const Home = () => {
   document.title = "Amazon.com. Spend less. Smile more.";
@@ -106,9 +108,14 @@ const Home = () => {
       <Mycarousel />
       <div style={positionStyles}>
         <CardContainer pos={true} displayItems={displayItems1} />
-        <ProductContainer displayItems={displayItems2} />
+        <ProductContainer displayItems={displayItems2} title={"Popular products in Beauty internationally"} />
         <CardContainer pos={false} displayItems={displayItems3} />
-        <ProductContainer displayItems={displayItems2} />
+        <DiscountItemsCntainer/>
+        <ProductContainer displayItems={displayItems2} title={"New international customers purchased"} />
+        <DiscountItemsCntainer/>
+        <CardContainer pos={false} displayItems={displayItems3} />
+        <ProductContainer displayItems={displayItems2} title={"Top picks for Pakistan"} />
+        <Footer/>
       </div>
     </div>
   );

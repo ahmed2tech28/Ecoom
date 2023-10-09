@@ -1,0 +1,31 @@
+.footer {
+    position: absolute;
+    left: -5vw;
+    margin-top: auto;
+}
+
+.footer-table {
+    /* background-color: red; */
+    margin: auto;
+    width: 60vw;
+}
+
+.foot-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-table td {
+    font-size: 13px;
+}
+
+.foot-bottom td a {
+    color: white;
+    text-decoration: none;
+}
+
+.foot-bottom td a:hover {
+    text-decoration: underline;
+}
