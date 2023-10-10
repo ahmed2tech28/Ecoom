@@ -5,6 +5,7 @@ import './output.css'
 
 import Home from './components/Home'
 import Navbar from './common/Navbar'
+import Cart from './components/Cart'
 
 import { Route, Routes } from 'react-router-dom'
 
@@ -14,6 +15,9 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
+    </Routes>
+    <Routes>
+      <Route path='/cart' element={<Cart/>}/>
     </Routes>
     </>
   )

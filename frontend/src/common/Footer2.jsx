@@ -60,7 +60,7 @@ const Footer = () => {
     ],
   ];
   return (
-    <div className="footer">
+    <div className="footer" style={{left:"0"}}>
       <Link>
         <div
           className="w-[100vw] mx-auto text-white h-[3em] items-center flex justify-center font-bold text-[12px] cursor-pointer"

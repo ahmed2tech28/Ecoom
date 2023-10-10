@@ -96,6 +96,69 @@ const Home = () => {
       image:"https://m.media-amazon.com/images/I/61iPbqQvEHL._AC_SY200_.jpg"
     },
   ];
+  
+  const displayItems4 = [
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/71t1g5vwSmL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/61iPbqQvEHL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/615Bo+zjwbL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/81og--mNZFL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/71n4aV-K8oL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/61XB+4JdV4L._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/71hL9thpHxL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/81og--mNZFL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/71t1g5vwSmL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+    {
+      link: "/",
+      image:"https://m.media-amazon.com/images/I/61iPbqQvEHL._AC_SY200_.jpg",
+      price:25,
+      name:"Product1",
+    },
+  ];
 
   const positionStyles = {
     position: "absolute",
@@ -110,9 +173,9 @@ const Home = () => {
         <CardContainer pos={true} displayItems={displayItems1} />
         <ProductContainer displayItems={displayItems2} title={"Popular products in Beauty internationally"} />
         <CardContainer pos={false} displayItems={displayItems3} />
-        <DiscountItemsCntainer/>
+        <DiscountItemsCntainer title={"Items under 25$"} displayItems={displayItems4}/>
         <ProductContainer displayItems={displayItems2} title={"New international customers purchased"} />
-        <DiscountItemsCntainer/>
+        <DiscountItemsCntainer title={"Items in your budget"} displayItems={displayItems4}/>
         <CardContainer pos={false} displayItems={displayItems3} />
         <ProductContainer displayItems={displayItems2} title={"Top picks for Pakistan"} />
         <Footer/>

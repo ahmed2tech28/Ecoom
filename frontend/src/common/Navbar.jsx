@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -29,6 +29,29 @@ const Navbar = () => {
             link:"/sell"
         },
     ]
+
+    const [location, setLocation] = useState("Pakistan")
+
+    function locateMe() {
+      if ("geolocation" in navigator) {
+        // Get the current position
+        navigator.geolocation.getCurrentPosition((position) => {
+          const { latitude, longitude } = position.coords;
+          setLocation(`${latitude} lat`);
+        }, (error) => {
+          console.error("Error getting location:", error);
+          setLocation(null);
+        });
+      } else {
+        console.error("Geolocation is not available in this browser.");
+        setLocation(null);
+      }
+    }
+
+    useEffect(() => {
+      locateMe()
+    }, [location])
+
   return (
     <>
         <header className="h-[3.8em] w-[100vw]" style={{ background: "#131921" }}>
@@ -41,9 +64,9 @@ const Navbar = () => {
                 <div className="right-left-nav flex flex-col justify-center">
                   <span className="material-symbols-outlined">location_on</span>
                 </div>
-                <div className="flex flex-col justify-center cursor-pointer">
-                  <div className="text-[12px]">Helow</div>
-                  <div className="text-[12px] font-bold">Pakistans</div>
+                <div onClick={() => locateMe()} className="flex flex-col justify-center cursor-pointer">
+                  <div className="text-[12px]">Dilver to</div>
+                  <div className="text-[12px] font-bold">{location}</div>
                 </div>
               </div>
             </div>
@@ -82,7 +105,7 @@ const Navbar = () => {
                     <div className="text-[13px] font-bold">& Orders</div>
                 </div>
                 <div className="flex flex-col">
-                    <img src="cart-icon.png" alt="" />
+                    <Link to={"/cart"}><img src="cart-icon.png" alt="Your Cart" /></Link>
                 </div>
             </div>
           </nav>
