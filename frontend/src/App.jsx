@@ -12,13 +12,13 @@ import { Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <>
-    <Navbar/>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-    </Routes>
-    <Routes>
-      <Route path='/cart' element={<Cart/>}/>
-    </Routes>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+      <Routes>
+        <Route path='/cart' element={<Cart/>}/>
+      </Routes>
     </>
   )
 }

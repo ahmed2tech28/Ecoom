@@ -6,11 +6,11 @@ const productSchema = new mongoose.Schema({
     title: {type: String, required:true},
     owner: {type: mongoose.Schema.Types.ObjectId, ref:"user"},
     slug: {type: String, required:true, unique:true},
-    reviews: [{ body: String, date: Date }],
+    reviews: [{ type: String, date: Date }],
     date: { type: Date, default: Date.now },
     hidden: {type: Boolean, required:true},
     tags:[{type: String}]
-});
+}, {timestamps:true});
 
 productSchema.methods.generateSlug = function() {
     this.slug = slugify(this.title, {
